@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import DatePicker from 'react-datepicker';
+import "react-datepicker/dist/react-datepicker.css";
 
 export default class CreateExercises extends Component {
 
@@ -80,6 +82,10 @@ export default class CreateExercises extends Component {
                     </div>
                     <div className="form-group">
                         <label>Description: </label>
+                        <input type="text" required className="form-control" value={this.state.description} onChange={this.onChangeDescription} />
+                    </div>
+                    <div className="form-group">
+                        <label>Duration: </label>
                         <input type="text" className="form-control" value={this.state.duration} onChange={this.onChangeDuration} />
                     </div>
                     <div className="form-group">
